@@ -1,10 +1,11 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./index.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
 import App from "./App.tsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./App.tsx";
+import Home from "./Home.tsx";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -17,5 +18,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );

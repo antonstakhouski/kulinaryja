@@ -1,12 +1,7 @@
-import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import { Outlet, Link } from "react-router-dom";
-import "./App.css";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link, Outlet } from "react-router-dom";
 
-function Home() {
-  return <h1>Welcome to Kulinaryja!</h1>;
-}
+import "./App.css";
 
 function App() {
   return (
