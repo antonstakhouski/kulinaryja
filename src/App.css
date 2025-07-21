@@ -47,3 +47,10 @@
 .read-the-docs {
   color: #888;
 }
+
+.kulinaryja-logo {
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* optional: centers the image */
+}
