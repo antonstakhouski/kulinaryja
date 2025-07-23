@@ -2,6 +2,12 @@
   width: 100vw;
 }
 
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 #content {
   display: flex;
   flex-direction: column;

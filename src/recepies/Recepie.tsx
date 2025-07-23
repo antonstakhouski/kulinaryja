@@ -1,8 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 
 import * as images from "../assets/recepies";
+import { belarusianRecipes } from "../data";
 import "./Recepie.css";
-import { belarusianRecipes } from "./data";
 
 const Recepie = () => {
   const recipe = useLoaderData<(typeof belarusianRecipes)[number]>();

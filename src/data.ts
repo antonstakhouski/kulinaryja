@@ -1,4 +1,4 @@
-import type { Category, Ingredient, Quantity, Recipe } from "../types";
+import type { Category, Ingredient, Quantity, Recipe } from "./types";
 
 // --- Master Data ---
 
@@ -36,7 +36,7 @@ const ingredients: Ingredient[] = [
   { id: 21, name: "Allspice" },
 ];
 
-const categories: Category[] = [
+export const categories: Category[] = [
   { id: 1, name: "Main Course" },
   { id: 2, name: "Soup" },
   { id: 3, name: "Side Dish" },

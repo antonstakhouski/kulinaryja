@@ -9,9 +9,9 @@ import App from "./App.tsx";
 import Contact from "./Contact.tsx";
 import Home from "./Home.tsx";
 import Categories from "./categories/index.tsx";
+import { belarusianRecipes } from "./data.ts";
 import "./index.css";
 import Recepie from "./recepies/Recepie.tsx";
-import { belarusianRecipes } from "./recepies/data.ts";
 import Recepies from "./recepies/index.tsx";
 
 const router = createBrowserRouter([
