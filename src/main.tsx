@@ -21,7 +21,14 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-      { index: true, element: <Home /> },
+      {
+        index: true,
+        element: <Home />,
+        loader: () =>
+          belarusianRecipes
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .slice(0, 3),
+      },
       {
         path: "/recepies",
         children: [
