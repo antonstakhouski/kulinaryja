@@ -59,6 +59,21 @@ const router = createBrowserRouter([
         loader: () => categories.sort((a, b) => a.name.localeCompare(b.name)),
       },
       {
+        path: "/contact",
+        element: <Contact />,
+        action: async ({ request }) => {
+          const formData = await request.formData();
+          const data = Object.fromEntries(formData.entries());
+          // Stubbed submission: log to console
+          // Using a custom event to forward to the browser console context
+          console.log("Contact form submitted:", data);
+          return {
+            success: true,
+            message: "Your message was sent successfully.",
+          };
+        },
+      },
+      {
         path: "/categories/:id",
         element: <CategoryPage />,
         loader: ({ params }) => {
