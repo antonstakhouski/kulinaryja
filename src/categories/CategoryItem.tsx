@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 import * as images from "../assets/recepies";
 import { belarusianRecipes } from "../data";
-import type { Category } from "../types";
+import type { CategoryProps } from "../types";
 
-const CategoryItem = ({ category }: { category: Category }) => {
+const CategoryItem = ({ category }: { category: CategoryProps }) => {
   const recipe = belarusianRecipes.find(
     (recipe) => recipe.category.id === category.id,
   );

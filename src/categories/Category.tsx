@@ -1,14 +1,19 @@
 import { Link, useLoaderData } from "react-router-dom";
 
 import * as images from "../assets/recepies";
-import { belarusianRecipes } from "../data";
+import type { CategoryProps, RecipeProps } from "../types";
 
-const Recepies = () => {
-  const recipes = useLoaderData<typeof belarusianRecipes>();
+type CategoryLoaderData = {
+  category: CategoryProps;
+  recipes: RecipeProps[];
+};
+
+const CategoryPage = () => {
+  const { category, recipes } = useLoaderData<CategoryLoaderData>();
 
   return (
     <div>
-      <h1>Recepies</h1>
+      <h1>{category.name}</h1>
       <div className="card-grid">
         {recipes.map((recipe) => (
           <Link to={`/recepies/${recipe.id}`} key={recipe.id} className="card">
@@ -27,4 +32,4 @@ const Recepies = () => {
   );
 };
 
-export default Recepies;
+export default CategoryPage;

@@ -1,5 +1,4 @@
 import { Navbar as BootstrapNavbar, Container, Nav } from "react-bootstrap";
-import { Spinner } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 
 import classNames from "classnames";

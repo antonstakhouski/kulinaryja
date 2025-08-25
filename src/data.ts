@@ -1,8 +1,13 @@
-import type { Category, Ingredient, Quantity, Recipe } from "./types";
+import type {
+  CategoryProps,
+  IngredientProps,
+  QuantityProps,
+  RecipeProps,
+} from "./types";
 
 // --- Master Data ---
 
-const quantities: Quantity[] = [
+const quantities: QuantityProps[] = [
   { id: 1, name: "g" },
   { id: 2, name: "ml" },
   { id: 3, name: "pcs" },
@@ -12,7 +17,7 @@ const quantities: Quantity[] = [
   { id: 7, name: "l" },
 ];
 
-const ingredients: Ingredient[] = [
+const ingredients: IngredientProps[] = [
   { id: 1, name: "Potato" },
   { id: 2, name: "Onion" },
   { id: 3, name: "All-purpose flour" },
@@ -36,7 +41,7 @@ const ingredients: Ingredient[] = [
   { id: 21, name: "Allspice" },
 ];
 
-export const categories: Category[] = [
+export const categories: CategoryProps[] = [
   { id: 1, name: "Main Course" },
   { id: 2, name: "Soup" },
   { id: 3, name: "Side Dish" },
@@ -45,7 +50,7 @@ export const categories: Category[] = [
 
 // --- Recipes ---
 
-export const belarusianRecipes: Recipe[] = [
+export const belarusianRecipes: RecipeProps[] = [
   {
     id: 1,
     name: "Draniki",

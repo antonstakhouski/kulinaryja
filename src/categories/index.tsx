@@ -1,12 +1,16 @@
-import { categories } from "../data";
+import { useLoaderData } from "react-router-dom";
+
+import type { categories } from "../data";
 import CategoryItem from "./CategoryItem";
 
 const Categories = () => {
+  const data = useLoaderData<typeof categories>();
+
   return (
     <>
       <h1>Categories</h1>
       <div className="card-grid">
-        {categories.map((category) => (
+        {data.map((category) => (
           <CategoryItem key={category.id} category={category} />
         ))}
       </div>
